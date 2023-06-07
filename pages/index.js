@@ -1,8 +1,8 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
-import Dashboard from "../components/Dashboard/dashboard";
-import { signIn, signOut, useSession } from "next-auth/react";
+import Dashboard from "../components/Dashboard";
+import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 

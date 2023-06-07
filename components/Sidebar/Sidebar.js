@@ -7,7 +7,7 @@ function Sidebar() {
   return (
     <div className="flex flex-col pt-[3.75rem] pr-[4.875rem] pb-[3.125rem] pl-[3.75rem] bg-black rounded-[1.875rem] overflow-hidden  lg:justify-between lg:flex-wrap lg:items-start lg:w-full  lg:p-20">
       <h1 className="sidebar-title">Board.</h1>
-      <div className="sidebar-navigation md:items-start pl-8 md:pl-0">
+      <div className="sidebar-navigation md:items-start">
         <p className="sidebar-tab active-tab flex items-center space-x-2">
           <DashboardCustomizeTwoToneIcon className="h-5 w-5" />
           <span className="align-middle">Dashboard</span>

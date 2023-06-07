@@ -1,11 +1,14 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
-// import SidebarNew from "../Sidebar/SidebarNew";
+import SidebarNew from "../Sidebar/SidebarNew";
+import DehazeIcon from "@mui/icons-material/Dehaze";
 
 function Header() {
   const router = useRouter();
-  const [isOpen, setIsOpen] = useState(false);
-
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  function toggleSidebar() {
+    setIsSidebarOpen(!isSidebarOpen);
+  }
   const logout = () => {
     router.push("/");
   };
@@ -13,8 +16,7 @@ function Header() {
   return (
     <div className="header-root">
       <div className="md:hidden">
-        hellow
-        {/* <SidebarNew /> */}
+        <DehazeIcon onClick={toggleSidebar} />
       </div>
       <div className="title hidden md:flex">Dashboard</div>
       <div className="navbar">
@@ -29,6 +31,9 @@ function Header() {
           alt=""
           onClick={logout}
         />
+      </div>
+      <div className="md:hidden">
+        <SidebarNew isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ function Dashboard() {
   return (
     <div className="dashboard-root">
       <div className="dashboard-page-container flex w-full md:m-[2.5rem]">
-        <div className="md:w-[20vw] w-full max-w-full mr-0  md:mr-[3.75rem] md:max-w-[17.5rem]">
+        <div className="md:w-[20vw] w-full max-w-full mr-0  md:mr-[3.75rem] md:max-w-[17.5rem] hidden md:flex">
           <Sidebar />
         </div>
         <div className="md:ml-10 mt-4 w-[95%] mx-auto md:mx-0 md:w-[74vw] mb-16 md:mb-0">

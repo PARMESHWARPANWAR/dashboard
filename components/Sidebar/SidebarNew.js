@@ -4,6 +4,7 @@ import AccountCircleTwoToneIcon from "@mui/icons-material/AccountCircleTwoTone";
 import ReceiptTwoToneIcon from "@mui/icons-material/ReceiptTwoTone";
 import SettingsTwoToneIcon from "@mui/icons-material/SettingsTwoTone";
 import EventRepeatTwoToneIcon from "@mui/icons-material/EventRepeatTwoTone";
+import { signOut } from "next-auth/react";
 
 function SidebarNew({ isOpen, setIsOpen }) {
   const sidebarRef = useRef();
@@ -70,6 +71,13 @@ function SidebarNew({ isOpen, setIsOpen }) {
               <p className="sidebar-tab flex items-center space-x-2">
                 <AccountCircleTwoToneIcon className="h-5 w-5" />
                 <span className="align-middle">Users</span>
+              </p>
+              <p
+                className="sidebar-tab flex items-center space-x-2"
+                onClick={signOut}
+              >
+                <SettingsTwoToneIcon className="h-5 w-5" />
+                <span className="align-middle">Logout</span>
               </p>
               <p className="sidebar-tab flex items-center space-x-2">
                 <SettingsTwoToneIcon className="h-5 w-5" />

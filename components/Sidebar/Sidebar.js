@@ -3,6 +3,7 @@ import AccountCircleTwoToneIcon from "@mui/icons-material/AccountCircleTwoTone";
 import ReceiptTwoToneIcon from "@mui/icons-material/ReceiptTwoTone";
 import SettingsTwoToneIcon from "@mui/icons-material/SettingsTwoTone";
 import EventRepeatTwoToneIcon from "@mui/icons-material/EventRepeatTwoTone";
+import { signOut } from "next-auth/react";
 function Sidebar() {
   return (
     <div className="flex flex-col pt-[3.75rem] pr-[4.875rem] pb-[3.125rem] pl-[3.75rem] bg-black rounded-[1.875rem] overflow-hidden  lg:justify-between lg:flex-wrap lg:items-start lg:w-full  lg:p-20">
@@ -23,6 +24,13 @@ function Sidebar() {
         <p className="sidebar-tab flex items-center space-x-2">
           <AccountCircleTwoToneIcon className="h-5 w-5" />
           <span className="align-middle">Users</span>
+        </p>
+        <p
+          className="sidebar-tab flex items-center space-x-2"
+          onClick={signOut}
+        >
+          <SettingsTwoToneIcon className="h-5 w-5" />
+          <span className="align-middle">Logout</span>
         </p>
         <p className="sidebar-tab flex items-center space-x-2">
           <SettingsTwoToneIcon className="h-5 w-5" />

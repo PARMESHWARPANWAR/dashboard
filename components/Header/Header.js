@@ -1,17 +1,12 @@
-import { useRouter } from "next/router";
 import { useState } from "react";
 import SidebarNew from "../Sidebar/SidebarNew";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 
 function Header() {
-  const router = useRouter();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   function toggleSidebar() {
     setIsSidebarOpen(!isSidebarOpen);
   }
-  const logout = () => {
-    router.push("/");
-  };
 
   return (
     <div className="header-root">
@@ -25,12 +20,7 @@ function Header() {
           <img className="search-icon" src="./search.svg" alt="search" />
         </div>
         <img className="notification" src="./bell.svg" alt="svg" />
-        <img
-          className="avatar"
-          src="./profilepic.png"
-          alt=""
-          onClick={logout}
-        />
+        <img className="avatar" src="./profilepic.png" alt="" />
       </div>
       <div className="md:hidden">
         <SidebarNew isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />

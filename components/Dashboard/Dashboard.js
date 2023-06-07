@@ -1,9 +1,9 @@
-import Chart from "../components/Chart/Chart";
-import Header from "../components/Header/Header";
-import DataCard from "../components/DataCard/DataCard";
-import Schedule from "../components/Schedule/Schedule";
-import TopProducts from "../components/TopProducts/TopProducts";
-import Sidebar from "../components/Sidebar/Sidebar";
+import Chart from "../Chart/Chart";
+import Header from "../Header/Header";
+import DataCard from "../DataCard/DataCard";
+import Schedule from "../Schedule/Schedule";
+import TopProducts from "../TopProducts/TopProducts";
+import Sidebar from "../Sidebar/Sidebar";
 
 function Dashboard() {
   return (

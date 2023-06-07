@@ -76,16 +76,6 @@
   display: inline-block;
 }
 
-.root {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 1.875rem 2.5rem 1.625rem 2.5rem;
-  background: #ffffff;
-  border-radius: 1.25rem;
-}
 
 .recharts-responsive-container {
   margin-top: 1.875rem;
@@ -131,9 +121,9 @@
 }
 
 .dashboard-page-container {
-  display: flex;
-  width: 100%;
-  margin: 2.5rem;
+  /* display: flex; */
+  /* width: 100%; */
+  /* margin: 2.5rem; */
 }
 
 .dashboard-page-main {
@@ -199,20 +189,9 @@
 }
 
 .data-card {
-  display: flex;
-  justify-content: space-between;
-  padding: 1.25rem 1.5625rem;
-  background: #DDEFE0;
-  border-radius: 1.25rem;
   min-width: 13.75rem;
 }
 
-.data-card-info {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1.5625rem;
-  gap: 0.3125rem;
-}
 
 .data-card-icon {
   height: 100%;
@@ -223,22 +202,9 @@
   height: 1.5rem;
 }
 
-.data-card-title {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.0625rem;
-  color: #000000;
-}
 
 .data-card-number {
   font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 2.0625rem;
-  color: #000000;
 }
 
 .header-root {

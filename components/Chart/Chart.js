@@ -25,17 +25,19 @@ function Chart() {
   }, []);
 
   return (
-    <div className="root">
+    <div className="pt-[1.875rem] pr-[1.5rem] pb-[1.625rem]  md:pt-[1.875rem] md:pr-[2.5rem] md:pb-[1.625rem] md:pl-[2.5rem] flex flex-col  justify-center items-center w-full bg-[#ffffff]  rounded-[1.25rem]">
       <ActivitiesCard />
-      <ResponsiveContainer width="100%" height={200}>
-        <LineChart data={chartData}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis dataKey="pv" />
-          <Line type="monotone" dataKey="pv" stroke="#E9A0A0" />
-          <Line type="monotone" dataKey="uv" stroke="#9BDD7C" />
-        </LineChart>
-      </ResponsiveContainer>
+      <div className="w-full h-40 md:h-96">
+        <ResponsiveContainer width="100%" height="100%">
+          <LineChart data={chartData}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis dataKey="pv" />
+            <Line type="monotone" dataKey="pv" stroke="#E9A0A0" />
+            <Line type="monotone" dataKey="uv" stroke="#9BDD7C" />
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 }

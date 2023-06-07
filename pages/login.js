@@ -1,10 +1,7 @@
-import { useRouter } from "next/router";
-
+import { signIn, signOut, useSession } from "next-auth/react";
 function Login() {
-  const router = useRouter();
-
   const login = () => {
-    router.push("/dashboard");
+    signIn("google", { callbackUrl: "/" });
   };
 
   return (

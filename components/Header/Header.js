@@ -1,7 +1,10 @@
 import { useRouter } from "next/router";
+import { useState } from "react";
+// import SidebarNew from "../Sidebar/SidebarNew";
 
 function Header() {
   const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
 
   const logout = () => {
     router.push("/");
@@ -9,7 +12,11 @@ function Header() {
 
   return (
     <div className="header-root">
-      <div className="title">Dashboard</div>
+      <div className="md:hidden">
+        hellow
+        {/* <SidebarNew /> */}
+      </div>
+      <div className="title hidden md:flex">Dashboard</div>
       <div className="navbar">
         <div className="searchbar">
           <input className="search" type="text" placeholder="Search..." />

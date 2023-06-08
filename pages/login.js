@@ -1,7 +1,9 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 function Login() {
   const login = () => {
-    signIn("google", { callbackUrl: "/" });
+    signIn("google", {
+      callbackUrl: "https://dashboard-one-lyart.vercel.app/",
+    });
   };
 
   return (
